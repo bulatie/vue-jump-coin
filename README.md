@@ -1,4 +1,5 @@
 # jump-coin
+[demo](https://bulatie.github.io/vue-jump-coin/)
 
 ## Build Setup
 
