@@ -17,7 +17,8 @@
     "vue",
     "animation",
     "vue-component",
-    "component"
+    "component",
+    "coin"
   ],
   "bugs": {
     "url": "https://github.com/bulatie/vue-jump-coin/issues"

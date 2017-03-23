@@ -61,7 +61,7 @@ Vue.jumpcoin.create(element, options)
 /*
 * params
 *   element<node> move to this element
-*   callback<object> apply this callback when jumpCoin arrived target element
+*   callback<function> apply this callback when jumpCoin arrived target element
 **/
 jumpCoinInstance.go(element, callback)
 ```
