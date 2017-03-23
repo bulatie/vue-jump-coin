@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "make": "NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
     "vue": "^2.2.2"
