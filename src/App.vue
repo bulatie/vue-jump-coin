@@ -32,12 +32,14 @@ export default {
   methods: {
     throws (origin) {
       let opts = [{
+        type: 'cons',
         animate: 'jello',
         function: 'cubic-bezier(0.6, -0.28, 0.735, 0.045)',
         quietUrl: require('./assets/coin.png'),
         url: require('./assets/axe.png'),
         duration: 500
       }, {
+        type: 'pros',
         animate: 'tada',
         quietUrl: require('./assets/coin.png'),
         url: require('./assets/coin.gif'),
@@ -45,15 +47,19 @@ export default {
       }]
       let newCoin = this.$jumpcoin.create(origin, opts[Math.round(Math.random())])
       setTimeout(() => {
-        newCoin.go(this.$refs.vimg, (animate) => {
-          if (animate === 'tada') {
-            this.pros +=1
-          }
-          if (animate === 'jello') {
-            this.cons +=1
-          }
-        })
-      }, 100)
+        if (newCoin.options.type === 'cons' && Math.round(Math.random())) {
+          newCoin.clear()
+        } else {
+          newCoin.go(this.$refs.vimg, (type) => {
+            if (type === 'pros') {
+              this.pros +=1
+            }
+            if (type === 'cons') {
+              this.cons +=1
+            }
+          })
+        }
+      }, 500)
     },
     throwThrowAll () {
       for (let i = 0; i < this.bbs.length; i++) {

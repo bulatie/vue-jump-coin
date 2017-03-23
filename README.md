@@ -38,6 +38,7 @@ Use animate.css to keep the target element alive
 
 Parameter | Type |Default| Description
 --------- | ---- | ------|-----------
+type | `string` | `coin` | go and clear methods will return this type to distinguish instance
 size | `number` | `30` | image width and height size (px unit)
 duration | `number`| `300` | duration to arrive (ms unit)
 function | `string` | `ease-out` | the time funciton for moving element
@@ -61,9 +62,17 @@ Vue.jumpcoin.create(element, options)
 /*
 * params
 *   element<node> move to this element
-*   callback<function> apply this callback when jumpCoin arrived target element
+*   callback<function> apply this callback when jumpCoin arrived target element, callback will pass instance's type back
 **/
 jumpCoinInstance.go(element, callback)
+```
+
+```javascript
+/*
+* params
+*   callback<function> apply this callback when jumpCoin disappered, callback will pass instance's type back
+**/
+jumpCoinInstance.clear(callback)
 ```
 ## Build Setup
 

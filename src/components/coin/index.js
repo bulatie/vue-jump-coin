@@ -5,6 +5,7 @@ const JumpCoin = {
     const Constructor = Vue.extend(coin)
     const create = (subject, opt = {}) => { // subject is start element
       let options = Object.assign({
+        type: 'coin', // go and clear methods will return this type to distinguish instance
         size: 30, // image width and height size (px unit)
         duration: 300, // duration to arrive (ms unit)
         function: 'ease-out', // the time funciton for moving element

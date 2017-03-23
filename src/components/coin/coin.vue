@@ -49,14 +49,21 @@ export default {
         setTimeout(() => {
           if (animate) {
             object.classList.add(animate, 'animated')
-            clb(animate)
+            clb && clb(this.options.type)
             setTimeout(() => {
               object.classList.remove(animate)
             }, 1000)
           }
           this.$destroy()
         }, this.options.duration)
-      }, 300)
+      }, 10)
+    },
+    clear () {
+      this.$refs.coin.style.webkitTransition = `0.5s ease-out`
+      this.$refs.coin.style.opacity = 0
+      setTimeout(() => {
+        this.$destroy()
+      }, 500)
     },
     loadImage () {
       this.hiddenCoin = true
