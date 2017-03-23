@@ -5,12 +5,12 @@ const JumpCoin = {
     const Constructor = Vue.extend(coin)
     const create = (subject, opt = {}) => { // subject is start element
       let options = Object.assign({
-        size: 30, // image width
-        duration: 300, // ms time to arrive
-        function: 'ease-out', // the time funciton for something you throw
-        animate: '', // the default animate.css animation for target element, default no animation
-        quietUrl: '', // png image for something you throw
-        url: '', // gif image for something you throw
+        size: 30, // image width and height size (px unit)
+        duration: 300, // duration to arrive (ms unit)
+        function: 'ease-out', // the time funciton for moving element
+        animate: '', // the animate.css animation for target element when element arrived
+        url: '', // dynamic image url (.gif) for something you want to move
+        quietUrl: '' // static image url to prevent dynamic image can't render out in duration time
       }, opt)
       let instance = new Constructor({
         el: document.createElement('div'),
