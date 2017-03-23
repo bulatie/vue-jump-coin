@@ -6,6 +6,7 @@ a plugin that moving a element to a sepcify position with animation for vue.js 2
 ## Usage
 #### install
 `npm install vue-jump-coin --save`
+
 #### Quickstart
 ```javascript
 // before start

@@ -1,6 +1,6 @@
 {
   "name": "vue-jump-coin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "a plugin that moving a element to a sepcify position with animation for vue.js 2+",
   "author": "bulatie <bulatie@gmail.com>",
   "main": "dist/vue-jump-coin.min.js",
